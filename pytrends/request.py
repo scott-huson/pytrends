@@ -149,11 +149,10 @@ class TrendReq(object):
             'tz': self.tz
         }
 
-        # make the request and parse the returned json
+        # make the request and parse the returned json but without trimming the get chars
         req_json = self._get_data(
             url=TrendReq.INTEREST_OVER_TIME_URL,
             method=TrendReq.GET_METHOD,
-            trim_chars=5,
             params=over_time_payload,
         )
 
